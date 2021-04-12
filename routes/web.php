@@ -26,17 +26,7 @@ Route::get('/our_school',function(){
 	return view('best_school ');
 });
 Route::get('donut-chart',[HighChartController::class,'donutChart']);
-Route::get('/', function () {
-   
-    $details = [
-        'title' => 'Mail from ItSolutionStuff.com',
-        'body' => 'This is for testing email using smtp'
-    ];
-   
-    \Mail::to('your_receiver_email@gmail.com')->send(new \App\Mail\MyTestMail($details));
-   
-    dd("Email is Sent.");
-});
+
 Route::get('/updated',function(){
 	return view('updated');
 });
